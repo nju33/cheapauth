@@ -1,0 +1,15 @@
+{
+  "extends": "@nju33/tsconfig-react-module",
+  "include": ["pages"],
+  "exclude": [],
+  "compilerOptions": {
+    "baseUrl": "../../packages",
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "paths": {
+      "react-cheapauth": [
+        "react-cheapauth/dist/module",
+        "react-cheapauth/src/index.ts"
+      ]
+    }
+  }
+}

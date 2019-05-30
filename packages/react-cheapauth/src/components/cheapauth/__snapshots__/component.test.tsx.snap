@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cheapauth when input value is correctly, become attribute to \`[data-approval='true']\` 1`] = `
+<div
+  class="sc-bdVaJa kgcBKS"
+  data-approval="false"
+  data-testid="cheapauth-root"
+>
+  <div>
+    <section
+      aria-labelledby="cheapauth"
+      class="section"
+    >
+      <header
+        class="header"
+      >
+        <h3
+          class="title"
+        >
+          タイトル
+        </h3>
+      </header>
+      <div>
+        <form
+          class="form"
+          data-testid="form"
+        >
+          <div
+            class="row"
+          >
+            <input
+              class="input"
+              data-testid="input"
+              type="password"
+            />
+          </div>
+          <div
+            class="row"
+          >
+            <button
+              class="submit"
+            >
+              ログイン
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Cheapauth when input value is correctly, become attribute to \`[data-approval='true']\` 2`] = `
+<div
+  class="sc-bdVaJa kgcBKS"
+  data-approval="true"
+  data-testid="cheapauth-root"
+>
+  <div>
+    <section
+      aria-labelledby="cheapauth"
+      class="section"
+    >
+      <header
+        class="header"
+      >
+        <h3
+          class="title"
+        >
+          タイトル
+        </h3>
+      </header>
+      <div>
+        <form
+          class="form"
+          data-testid="form"
+        >
+          <div
+            class="row"
+          >
+            <input
+              class="input"
+              data-testid="input"
+              type="password"
+            />
+          </div>
+          <div
+            class="row"
+          >
+            <button
+              class="submit"
+            >
+              ログイン
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Cheapauth when input value is incorrectly, not become attribute to \`[data-approval='true']\` 1`] = `
+<div
+  class="sc-bdVaJa kgcBKS"
+  data-approval="false"
+  data-testid="cheapauth-root"
+>
+  <div>
+    <section
+      aria-labelledby="cheapauth"
+      class="section"
+    >
+      <header
+        class="header"
+      >
+        <h3
+          class="title"
+        >
+          タイトル
+        </h3>
+      </header>
+      <div>
+        <form
+          class="form"
+          data-testid="form"
+        >
+          <div
+            class="row"
+          >
+            <input
+              class="input"
+              data-testid="input"
+              type="password"
+            />
+          </div>
+          <div
+            class="row"
+          >
+            <button
+              class="submit"
+            >
+              ログイン
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Cheapauth when input value is incorrectly, not become attribute to \`[data-approval='true']\` 2`] = `
+<div
+  class="sc-bdVaJa kgcBKS"
+  data-approval="false"
+  data-testid="cheapauth-root"
+>
+  <div>
+    <section
+      aria-labelledby="cheapauth"
+      class="section"
+    >
+      <header
+        class="header"
+      >
+        <h3
+          class="title"
+        >
+          タイトル
+        </h3>
+      </header>
+      <div>
+        <form
+          class="form"
+          data-testid="form"
+        >
+          <div
+            class="row"
+          >
+            <input
+              class="input"
+              data-testid="input"
+              type="password"
+            />
+            <div
+              class="error-message"
+              data-testid="error-message"
+            >
+              <small>
+                パスワードが違います
+              </small>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <button
+              class="submit"
+            >
+              ログイン
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+`;

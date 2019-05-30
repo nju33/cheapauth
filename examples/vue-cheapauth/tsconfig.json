@@ -1,0 +1,18 @@
+{
+  "extends": "@nju33/tsconfig-react-module",
+  "include": ["nuxt.config.ts", "pages", "../../packages/vue-cheapauth/src"],
+  "exclude": [],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxFactory": "createElement",
+    "baseUrl": "../../packages",
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "paths": {
+      "vue-cheapauth": [
+        "vue-cheapauth/dist/module",
+        "vue-cheapauth/src"
+      ]
+    },
+    "experimentalDecorators": true
+  }
+}
