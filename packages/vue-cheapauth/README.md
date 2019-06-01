@@ -1,6 +1,7 @@
 # vue-cheapauth
 
 [![vue-cheapauth](https://badgen.net/badge//nju33,cheapauth/000?icon=github&list=1)](https://github.com/nju33/cheapauth)
+[![npm:version](https://badgen.net/npm/v/vue-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/vue-cheapauth
 
 ## Prepare
 

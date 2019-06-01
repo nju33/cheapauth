@@ -1,6 +1,7 @@
 # react-cheapauth
 
 [![react-cheapauth](https://badgen.net/badge//nju33,cheapauth/000?icon=github&list=1)](https://github.com/nju33/cheapauth)
+[![npm:version](https://badgen.net/npm/v/react-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/react-cheapauth
 
 ## Prepare
 
