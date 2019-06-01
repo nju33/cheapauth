@@ -28,19 +28,25 @@
 	"settings": {
 		"files.exclude": {
 			"**/.cache": true,
+			"**/.rpt2_cache": true,
+			"**/.nuxt": true,
 			"**/.next": true,
 			"**/dist": true,
 			"**/docs": true,
 			"**/node_modules": true
 		},
 		"files.watcherExclude": {
-			"**/.cache": true,
-			"**/.next": true,
-			"**/dist": true,
-			"**/docs": true
+			"**/.cache/**": true,
+			"**/.rpt2_cache/**": true,
+			"**/.nuxt/**": true,
+			"**/.next/**": true,
+			"**/dist/**": true,
+			"**/docs/**": true
 		},
 		"search.exclude": {
 			"**/.cache": true,
+			"**/.rpt2_cache": true,
+			"**/.nuxt": true,
 			"**/.next": true,
 			"**/dist": true,
 			"**/docs": true

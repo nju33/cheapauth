@@ -1,6 +1,6 @@
 {
   "name": "react-cheapauth",
-  "description": "A cheap authentication",
+  "description": "A UI component of cheap authentication screen",
   "version": "0.0.0",
   "main": "dist/main/index.js",
   "types": "dist/types/index.d.ts",
@@ -24,6 +24,7 @@
     "build:main": "tsc -P tsconfig.main.json",
     "build:module": "tsc -P tsconfig.module.json",
     "build:types": "tsc -P tsconfig.types.json --emitDeclarationOnly",
+    "prebuild": "rm -rf dist",
     "build": "run-p build:*",
     "docs": "typedoc --theme minimal --out docs src/index.ts --ignoreCompilerErrors"
   },
