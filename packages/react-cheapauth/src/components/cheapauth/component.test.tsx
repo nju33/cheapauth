@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, fireEvent, cleanup, RenderResult} from 'react-testing-library';
+import {render, fireEvent, cleanup, RenderResult} from '@testing-library/react';
 import 'jest-dom/extend-expect';
 import {Cheapauth} from './component';
 import 'cheapauth-jest/extend-expect';
