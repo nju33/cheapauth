@@ -1,7 +1,7 @@
 # react-cheapauth
 
 [![react-cheapauth](https://badgen.net/badge//nju33,cheapauth/000?icon=github&list=1)](https://github.com/nju33/cheapauth)
-[![npm:version](https://badgen.net/npm/v/react-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/react-cheapauth
+[![npm:version](https://badgen.net/npm/v/react-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/react-cheapauth)
 
 ## Prepare
 
@@ -31,6 +31,8 @@ export default = () => {
   )
 }
 ```
+
+This example is case of in the NextJS.
 
 [![Edit @example/react-cheapauth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nju33/cheapauth/tree/%40example%2Freact-cheapauth/?fontsize=14)
 
