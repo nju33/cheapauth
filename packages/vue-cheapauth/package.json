@@ -28,7 +28,7 @@
     "build:module": "rollup -c rollup.config.js --sourcemap --format esm --file dist/module/index.js",
     "build:types": "yarn cp-dts-into-dist-module && mkdir -p dist/types && cp src/cheapauth.d.ts dist/types/index.d.ts",
     "cp-dts-into-dist-module": "cp src/cheapauth.d.ts dist/main/index.d.ts && cp src/cheapauth.d.ts dist/module/index.d.ts",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist .rpt2_cache",
     "build": "run-s build:*",
     "docs": "typedoc --theme minimal --out docs src/index.ts --ignoreCompilerErrors"
   },
