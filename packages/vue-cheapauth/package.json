@@ -9,6 +9,7 @@
   "browser": {
     "./sfc": "src/components/cheapauth/sfc/index.vue"
   },
+  "style": "dist/main/index.css",
   "repository": "nju33/cheapauth",
   "author": "nju33 <nju33.ki@gmail.com>",
   "license": "MIT",
@@ -25,6 +26,7 @@
     "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | node_modules/.bin/coveralls; fi",
     "test:watch": "jest --watch",
     "build:main": "rollup -c rollup.config.js --sourcemap --format cjs --file dist/main/index.js",
+    "postbuild:main": "cp dist/main/index.css cheapauth.css",
     "build:module": "rollup -c rollup.config.js --sourcemap --format esm --file dist/module/index.js",
     "build:types": "mkdir -p dist/{main,module,types} && yarn cp-dts-into-dist-module && cp src/cheapauth.d.ts dist/types/index.d.ts",
     "cp-dts-into-dist-module": "cp src/cheapauth.d.ts dist/main/index.d.ts && cp src/cheapauth.d.ts dist/module/index.d.ts",

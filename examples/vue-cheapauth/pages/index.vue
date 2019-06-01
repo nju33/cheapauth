@@ -9,6 +9,7 @@
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
 import Cheapauth from 'vue-cheapauth';
+import 'vue-cheapauth/cheapauth.css';
 
 @Component({
   components: {
