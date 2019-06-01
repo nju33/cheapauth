@@ -9,7 +9,7 @@ export default {
     nodeResolve(),
     commonjs(),
     typescript({
-      clean: false,
+      clean: true,
       // > Does not work with plugin which containing async/await syntax #105
       // > https://github.com/ezolenko/rollup-plugin-typescript2/issues/105
       objectHashIgnoreUnknownHack: true,
