@@ -32,6 +32,8 @@ export default = () => {
 }
 ```
 
+[![Edit @example/react-cheapauth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nju33/cheapauth/tree/%40example%2Freact-cheapauth/?fontsize=14)
+
 ### Properties
 
 The component `Cheapauth` is required three properties `password`, `title` and `submitLabel`. `title` and `submitLabel` is just become to the text of title and button of authentication form.

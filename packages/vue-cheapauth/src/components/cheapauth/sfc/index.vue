@@ -1,35 +1,35 @@
 <template>
-  <div class="root" data-testid="cheapauth--root" :data-approval="approval">
-    <div>
-      <section class="section" aria-labelledby="cheapauth">
-        <header class="header">
-          <h3 class="title" data-testid="cheapauth--title">{{title}}</h3>
+  <div class="cheapauth--root" data-testid="cheapauth--root" :data-approval="approval">
+    <div class="cheapauth--document">
+      <section class="cheapauth--section" aria-labelledby="cheapauth">
+        <header class="cheapauth--header">
+          <h3 class="cheapauth--title" data-testid="cheapauth--title">{{title}}</h3>
         </header>
         <div>
           <form
-            class="form"
+            class="cheapauth--form"
             data-testid="cheapauth--form"
             @submit.stop.prevent="onSubmit"
           >
-            <div class="row">
+            <div class="cheapauth--row">
               <input
                 v-focus
                 type="password"
-                class="input"
+                class="cheapauth--input"
                 data-testid="cheapauth--input"
                 v-model="input"
               />
               <div
                 v-if="error"
-                class="error-message"
+                class="cheapauth--error-message"
                 data-testid="cheapauth--error-message"
                 aria-live="assertive"
               >
                 <small>{{errorMessage}}</small>
               </div>
             </div>
-            <div class="row">
-              <button class="submit" data-testid="cheapauth--submit">{{submitLabel}}</button>
+            <div class="cheapauth--row">
+              <button class="cheapauth--submit" data-testid="cheapauth--submit">{{submitLabel}}</button>
             </div>
           </form>
         </div>
@@ -98,17 +98,17 @@ export default class extends Vue
 
 </script>
 
-<style scoped="true">
-  .root {
+<style>
+  .cheapauth--root {
     position: relative;
     z-index: 999999999;
   }
 
-  .root[data-approval='true'] {
+  .cheapauth--root[data-approval='true'] .cheapauth--document{
     display: none;
   }
 
-  .root > div {
+  .cheapauth--document {
     position: fixed;
     width: 150vw;
     height: 150vh;
@@ -122,33 +122,33 @@ export default class extends Vue
     align-items: center;
   }
 
-  .header {
+  .cheapauth--header {
     margin-left: 0.5em;
   }
 
-  .section {
+  .cheapauth--section {
     width: 90vw;
   }
 
-  .title {
+  .cheapauth--title {
     text-align: center;
     margin-bottom: 1.5em;
     font-size: 2em;
   }
 
-  .form {
+  .cheapauth--form {
     display: flex;
     flex-direction: column;
   }
 
-  .row {
+  .cheapauth--row {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
   }
 
-  .input {
+  .cheapauth--input {
     font-size: 1em;
     height: 2.5em;
     width: 100%;
@@ -158,7 +158,7 @@ export default class extends Vue
     box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.5);
   }
 
-  .error-message {
+  .cheapauth--error-message {
     position: absolute;
     left: 0;
     bottom: -1.5em;
@@ -166,7 +166,7 @@ export default class extends Vue
     margin-left: 0.5em;
   }
 
-  .submit {
+  .cheapauth--submit {
     font-size: 1em;
     max-width: 55vw;
     width: 100%;
@@ -180,26 +180,26 @@ export default class extends Vue
   }
 
   @media screen and (min-width: 758px) {
-    .section {
+    .cheapauth--section {
       width: auto;
     }
 
-    .title {
+    .cheapauth--title {
       text-align: left;
       margin-bottom: 0.5em;
       font-size: 1.2em;
     }
 
-    .form {
+    .cheapauth--form {
       flex-direction: row;
       align-items: flex-start;
     }
 
-    .input {
+    .cheapauth--input {
       width: 30em;
     }
 
-    .submit {
+    .cheapauth--submit {
       width: auto;
       margin-top: 0;
       margin-left: 0.5em;

@@ -45,6 +45,9 @@ export default {
 </script>
 ```
 
+
+[![Edit @example/vue-cheapauth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nju33/cheapauth/tree/%40example%2Fvue-cheapauth/?fontsize=14)
+
 ### Properties
 
 The component `with-cheapauth` is required three properties `password`, `title` and `submitLabel`. `title` and `submitLabel` is just become to the text of title and button of authentication form.

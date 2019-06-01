@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 
 const _a394d804 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _7f09f249 = () => interopDefault(import('../pages/_cheapauth.ts' /* webpackChunkName: "pages/_cheapauth" */))
 
 Vue.use(Router)
 
@@ -83,10 +82,6 @@ export function createRouter() {
       path: "/",
       component: _a394d804,
       name: "index"
-    }, {
-      path: "/:cheapauth",
-      component: _7f09f249,
-      name: "cheapauth"
     }],
 
     fallback: false

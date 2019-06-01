@@ -7,8 +7,7 @@
 </template>
 
 <script lang="ts">
-import {CreateElement, VNode} from 'vue';
-import {Component, Vue, Prop} from 'vue-property-decorator';
+import {Component, Vue} from 'vue-property-decorator';
 import Cheapauth from 'vue-cheapauth';
 
 @Component({

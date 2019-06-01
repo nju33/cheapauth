@@ -6,7 +6,7 @@
     "baseUrl": "../../packages",
     "paths": {
       "vue-cheapauth": [
-        "vue-cheapauth",
+        "vue-cheapauth/dist/module",
         "vue-cheapauth/src/components/cheapauth/sfc/index.vue"
       ]
     },

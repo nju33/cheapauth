@@ -18,8 +18,12 @@ Ceahaptuh by the [React](https://github.com/facebook/react). Specifically at [he
 [![npm:version](https://badgen.net/npm/v/react-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/react-cheapauth)
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
+[![Edit @example/react-cheapauth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nju33/cheapauth/tree/%40example%2Freact-cheapauth/?fontsize=14)
+
 ### `vue-cheapauth`
 
 Ceahaptuh by the [Vue](https://github.com/vuejs/vue). Specifically at [here](./packages/vue-cheapauth).
 
 [![npm:version](https://badgen.net/npm/v/vue-cheapauth?icon=npm&label=)](https://www.npmjs.com/package/vue-cheapauth)
+
+[![Edit @example/vue-cheapauth](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nju33/cheapauth/tree/%40example%2Fvue-cheapauth/?fontsize=14)
