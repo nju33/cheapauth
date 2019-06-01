@@ -45,5 +45,11 @@
 			"**/dist": true,
 			"**/docs": true
 		}
-	}
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "jpoissonnier.vscode-styled-components"
+    ]
+  }
 }

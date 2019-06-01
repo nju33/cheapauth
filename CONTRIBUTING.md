@@ -1,11 +1,8 @@
-# CONTRIBUTING
+## vscode
 
-## コードについて
+I recommend the 'Vitual Studio Code' (vscode) using with workspace setting that `package.code-workspace` when developing.
+That is able to start the vscode in the below.
 
-リポジトリに含める場合に以下を守る。
-
-### `**/*.ts`
-
-1. Prettier で整形
-2. tslint に引っかからないように
-3. tsc が通るように
+```sh
+$ code package.code-workspace
+```
