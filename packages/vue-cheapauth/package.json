@@ -26,7 +26,7 @@
     "test:watch": "jest --watch",
     "build:main": "rollup -c rollup.config.js --sourcemap --format cjs --file dist/main/index.js",
     "build:module": "rollup -c rollup.config.js --sourcemap --format esm --file dist/module/index.js",
-    "build:types": "yarn cp-dts-into-dist-module && mkdir -p dist/types && cp src/cheapauth.d.ts dist/types/index.d.ts",
+    "build:types": "mkdir -p dist/{main,module,types} && yarn cp-dts-into-dist-module && cp src/cheapauth.d.ts dist/types/index.d.ts",
     "cp-dts-into-dist-module": "cp src/cheapauth.d.ts dist/main/index.d.ts && cp src/cheapauth.d.ts dist/module/index.d.ts",
     "prebuild": "rm -rf dist .rpt2_cache",
     "build": "run-s build:*",
@@ -54,5 +54,5 @@
     "vue-jest": "^3.0.4",
     "vue-property-decorator": "^8.1.1"
   },
-  "gitHead": "5f124794eaeea58ea4bdf1830818b2116c304dc3"
+  "gitHead": "3c17e5b8af8f081254955338ad493f9d417898ec"
 }
