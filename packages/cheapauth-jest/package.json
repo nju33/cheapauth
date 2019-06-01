@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "cheapauth-jest",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.2-alpha.0",
   "dependencies": {
     "@testing-library/react": "^8.0.1",
     "@types/jest": "^24.0.13",
