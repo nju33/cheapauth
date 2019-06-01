@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",
-    "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | node_modules/.bin/coveralls; fi",
+    "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | ../../node_modules/.bin/coveralls; fi",
     "test:watch": "jest --watch",
     "build:main": "tsc -P tsconfig.main.json",
     "build:module": "tsc -P tsconfig.module.json",

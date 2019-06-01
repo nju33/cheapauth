@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",
-    "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | node_modules/.bin/coveralls; fi",
+    "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | ../../node_modules/.bin/coveralls; fi",
     "test:watch": "jest --watch",
     "build:main": "rollup -c rollup.config.js --sourcemap --format cjs --file dist/main/index.js",
     "postbuild:main": "cp dist/main/index.css cheapauth.css",

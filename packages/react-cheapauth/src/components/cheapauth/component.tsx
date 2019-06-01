@@ -74,29 +74,29 @@ export class Cheapauth extends React.PureComponent<
           data-approval={this.state.approval}
           data-testid="cheapauth--root"
         >
-          <div>
-            <section className="section" aria-labelledby="cheapauth">
-              <header className="header">
-                <h3 className="title" data-testid="cheapauth--title">
+          <div className="cheapauth--document">
+            <section className="cheapauth--section" aria-labelledby="cheapauth">
+              <header className="cheapauth--header">
+                <h3 className="cheapauth--title" data-testid="cheapauth--title">
                   {this.props.title}
                 </h3>
               </header>
               <div>
                 <form
-                  className="form"
+                  className="cheapauth--form"
                   data-testid="cheapauth--form"
                   onSubmit={this.onSubmit}
                 >
-                  <div className="row">
+                  <div className="cheapauth--row">
                     <input
                       ref={this.inputRef}
                       type="password"
-                      className="input"
+                      className="cheapauth--input"
                       data-testid="cheapauth--input"
                     />
                     {this.state.error && (
                       <div
-                        className="error-message"
+                        className="cheapauth--error-message"
                         data-testid="cheapauth--error-message"
                         aria-live="assertive"
                       >
@@ -104,8 +104,11 @@ export class Cheapauth extends React.PureComponent<
                       </div>
                     )}
                   </div>
-                  <div className="row">
-                    <button className="submit" data-testid="cheapauth--submit">
+                  <div className="cheapauth--row">
+                    <button
+                      className="cheapauth--submit"
+                      data-testid="cheapauth--submit"
+                    >
                       {this.props.submitLabel}
                     </button>
                   </div>
@@ -133,7 +136,7 @@ component.root = styled.div`
     display: none;
   }
 
-  > div {
+  .cheapauth--document {
     position: fixed;
     width: 150vw;
     height: 150vh;
@@ -147,34 +150,34 @@ component.root = styled.div`
     align-items: center;
   }
 
-  .header {
+  .cheapauth--header {
     margin-left: 0.5em;
   }
 
-  .section {
+  .cheapauth--section {
     width: 90vw;
   }
 
-  .title {
+  .cheapauth--title {
     text-align: center;
     margin-bottom: 1.5em;
     font-size: 2em;
   }
 
-  .form {
+  .cheapauth--form {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
   }
 
-  .row {
+  .cheapauth--row {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
   }
 
-  .input {
+  .cheapauth--input {
     font-size: 1em;
     height: 2.5em;
     width: 100%;
@@ -184,7 +187,7 @@ component.root = styled.div`
     box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.5);
   }
 
-  .error-message {
+  .cheapauth--error-message {
     position: absolute;
     left: 0;
     bottom: -1.5em;
@@ -192,7 +195,7 @@ component.root = styled.div`
     margin-left: 0.5em;
   }
 
-  .submit {
+  .cheapauth--submit {
     font-size: 1em;
     max-width: 55vw;
     width: 100%;
@@ -206,26 +209,26 @@ component.root = styled.div`
   }
 
   @media screen and (min-width: 758px) {
-    .section {
+    .cheapauth--section {
       width: auto;
     }
 
-    .title {
+    .cheapauth--title {
       text-align: left;
       margin-bottom: 0.5em;
       font-size: 1.2em;
     }
 
-    .form {
+    .cheapauth--form {
       flex-direction: row;
       align-items: flex-start;
     }
 
-    .input {
+    .cheapauth--input {
       width: 30em;
     }
 
-    .submit {
+    .cheapauth--submit {
       width: auto;
       margin-top: 0;
       margin-left: 0.5em;

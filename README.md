@@ -6,7 +6,7 @@ A UI component of cheap authentication screen.
 [![typescript](https://badgen.net/badge//typescript/0376c6?icon=typescript)](https://www.typescriptlang.org/)
 [![ci:status](https://badgen.net/circleci/github/nju33/cheapauth/master)](https://circleci.com/gh/nju33/cheapauth)
 [![Coverage Status](https://coveralls.io/repos/github/nju33/cheapauth/badge.svg?branch=master)](https://coveralls.io/github/nju33/cheapauth?branch=master)
-[![license](https://badgen.net/npm/license/react-dayo)](https://github.com/nju33/react-dayo/blob/master/LICENSE)
+[![license](https://badgen.net/npm/license/react-cheapauth)](https://github.com/nju33/cheapauth/blob/master/LICENSE)
 [![code style: prettier](https://badgen.net/badge//prettier/ff69b3?label=code%20style)](https://github.com/prettier/prettier)
 
 ## Available components

@@ -2,19 +2,21 @@
 
 exports[`Cheapauth is input password is correct 1`] = `
 <div
-  class="root"
+  class="cheapauth--root"
   data-testid="cheapauth--root"
 >
-  <div>
+  <div
+    class="cheapauth--document"
+  >
     <section
       aria-labelledby="cheapauth"
-      class="section"
+      class="cheapauth--section"
     >
       <header
-        class="header"
+        class="cheapauth--header"
       >
         <h3
-          class="title"
+          class="cheapauth--title"
           data-testid="cheapauth--title"
         >
           タイトル
@@ -23,14 +25,14 @@ exports[`Cheapauth is input password is correct 1`] = `
        
       <div>
         <form
-          class="form"
+          class="cheapauth--form"
           data-testid="cheapauth--form"
         >
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <input
-              class="input"
+              class="cheapauth--input"
               data-testid="cheapauth--input"
               type="password"
             />
@@ -39,10 +41,10 @@ exports[`Cheapauth is input password is correct 1`] = `
           </div>
            
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <button
-              class="submit"
+              class="cheapauth--submit"
               data-testid="cheapauth--submit"
             >
               ログインする
@@ -59,20 +61,22 @@ exports[`Cheapauth is input password is correct 1`] = `
 
 exports[`Cheapauth is input password is correct 2`] = `
 <div
-  class="root"
+  class="cheapauth--root"
   data-approval="true"
   data-testid="cheapauth--root"
 >
-  <div>
+  <div
+    class="cheapauth--document"
+  >
     <section
       aria-labelledby="cheapauth"
-      class="section"
+      class="cheapauth--section"
     >
       <header
-        class="header"
+        class="cheapauth--header"
       >
         <h3
-          class="title"
+          class="cheapauth--title"
           data-testid="cheapauth--title"
         >
           タイトル
@@ -81,14 +85,14 @@ exports[`Cheapauth is input password is correct 2`] = `
        
       <div>
         <form
-          class="form"
+          class="cheapauth--form"
           data-testid="cheapauth--form"
         >
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <input
-              class="input"
+              class="cheapauth--input"
               data-testid="cheapauth--input"
               type="password"
             />
@@ -97,10 +101,10 @@ exports[`Cheapauth is input password is correct 2`] = `
           </div>
            
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <button
-              class="submit"
+              class="cheapauth--submit"
               data-testid="cheapauth--submit"
             >
               ログインする
@@ -116,19 +120,21 @@ exports[`Cheapauth is input password is correct 2`] = `
 
 exports[`Cheapauth is input password is incorrect 1`] = `
 <div
-  class="root"
+  class="cheapauth--root"
   data-testid="cheapauth--root"
 >
-  <div>
+  <div
+    class="cheapauth--document"
+  >
     <section
       aria-labelledby="cheapauth"
-      class="section"
+      class="cheapauth--section"
     >
       <header
-        class="header"
+        class="cheapauth--header"
       >
         <h3
-          class="title"
+          class="cheapauth--title"
           data-testid="cheapauth--title"
         >
           タイトル
@@ -137,14 +143,14 @@ exports[`Cheapauth is input password is incorrect 1`] = `
        
       <div>
         <form
-          class="form"
+          class="cheapauth--form"
           data-testid="cheapauth--form"
         >
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <input
-              class="input"
+              class="cheapauth--input"
               data-testid="cheapauth--input"
               type="password"
             />
@@ -153,10 +159,10 @@ exports[`Cheapauth is input password is incorrect 1`] = `
           </div>
            
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <button
-              class="submit"
+              class="cheapauth--submit"
               data-testid="cheapauth--submit"
             >
               ログインする
@@ -173,19 +179,21 @@ exports[`Cheapauth is input password is incorrect 1`] = `
 
 exports[`Cheapauth is input password is incorrect 2`] = `
 <div
-  class="root"
+  class="cheapauth--root"
   data-testid="cheapauth--root"
 >
-  <div>
+  <div
+    class="cheapauth--document"
+  >
     <section
       aria-labelledby="cheapauth"
-      class="section"
+      class="cheapauth--section"
     >
       <header
-        class="header"
+        class="cheapauth--header"
       >
         <h3
-          class="title"
+          class="cheapauth--title"
           data-testid="cheapauth--title"
         >
           タイトル
@@ -194,21 +202,21 @@ exports[`Cheapauth is input password is incorrect 2`] = `
        
       <div>
         <form
-          class="form"
+          class="cheapauth--form"
           data-testid="cheapauth--form"
         >
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <input
-              class="input"
+              class="cheapauth--input"
               data-testid="cheapauth--input"
               type="password"
             />
              
             <div
               aria-live="assertive"
-              class="error-message"
+              class="cheapauth--error-message"
               data-testid="cheapauth--error-message"
             >
               <small>
@@ -218,10 +226,10 @@ exports[`Cheapauth is input password is incorrect 2`] = `
           </div>
            
           <div
-            class="row"
+            class="cheapauth--row"
           >
             <button
-              class="submit"
+              class="cheapauth--submit"
               data-testid="cheapauth--submit"
             >
               ログインする
