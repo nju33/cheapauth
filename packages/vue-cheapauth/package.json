@@ -14,7 +14,8 @@
   "author": "nju33 <nju33.ki@gmail.com>",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "cheapauth.css"
   ],
   "keywords": [
     "vue-component",
