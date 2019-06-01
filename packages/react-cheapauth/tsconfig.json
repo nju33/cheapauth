@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": "..",
+    "paths": {
+      "cheapauth-jest/extend-expect": ["cheapauth-jest/src/index.ts"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

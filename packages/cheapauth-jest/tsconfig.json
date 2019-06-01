@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
