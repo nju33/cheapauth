@@ -9,6 +9,10 @@
 			"path": "./packages/vue-cheapauth"
 		},
 		{
+			"name": "chepauth-jest",
+			"path": "./packages/cheapauth-jest"
+		},
+		{
 			"name": "@example/react-cheapauth",
 			"path": "./examples/react-cheapauth"
 		},

@@ -72,17 +72,19 @@ export class Cheapauth extends React.PureComponent<
         <component.root
           theme={this.props.theme}
           data-approval={this.state.approval}
-          data-testid="cheapauth-root"
+          data-testid="cheapauth--root"
         >
           <div>
             <section className="section" aria-labelledby="cheapauth">
               <header className="header">
-                <h3 className="title">{this.props.title}</h3>
+                <h3 className="title" data-testid="cheapauth--title">
+                  {this.props.title}
+                </h3>
               </header>
               <div>
                 <form
                   className="form"
-                  data-testid="form"
+                  data-testid="cheapauth--form"
                   onSubmit={this.onSubmit}
                 >
                   <div className="row">
@@ -90,19 +92,22 @@ export class Cheapauth extends React.PureComponent<
                       ref={this.inputRef}
                       type="password"
                       className="input"
-                      data-testid="input"
+                      data-testid="cheapauth--input"
                     />
                     {this.state.error && (
                       <div
                         className="error-message"
-                        data-testid="error-message"
+                        data-testid="cheapauth--error-message"
+                        aria-live="assertive"
                       >
                         <small>{this.state.errorMessage}</small>
                       </div>
                     )}
                   </div>
                   <div className="row">
-                    <button className="submit">{this.props.submitLabel}</button>
+                    <button className="submit" data-testid="cheapauth--submit">
+                      {this.props.submitLabel}
+                    </button>
                   </div>
                 </form>
               </div>
@@ -153,7 +158,7 @@ component.root = styled.div`
   .title {
     text-align: center;
     margin-bottom: 1.5em;
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .form {
@@ -181,6 +186,7 @@ component.root = styled.div`
 
   .error-message {
     position: absolute;
+    left: 0;
     bottom: -1.5em;
     color: #cb1b45;
     margin-left: 0.5em;
@@ -196,7 +202,7 @@ component.root = styled.div`
     cursor: pointer;
     border: none;
     background: ${props => props.theme.accentColor || '#2ea9df'};
-    margin-top: 1.5em;
+    margin-top: 2em;
   }
 
   @media screen and (min-width: 758px) {

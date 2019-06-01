@@ -12,19 +12,12 @@ export interface CheapauthComponentProps {
   password: string;
 }
 
-export interface CheapauthComponentTruhyFormState {
-  error: true;
-  errorMessage: string;
-}
-
-export interface CheapauthComponentFalsyFormState {
-  error: false;
-}
-
 export interface CheapauthComponentAuthorizationState {
-  password?: PasswordImpl;
+  answer: PasswordImpl;
   approval: boolean;
 }
 
-export type CheapauthComponentState = CheapauthComponentAuthorizationState &
-  (CheapauthComponentTruhyFormState | CheapauthComponentFalsyFormState);
+export interface CheapauthComponentFalsyFormState {
+  error: boolean;
+  errorMessage: string;
+}

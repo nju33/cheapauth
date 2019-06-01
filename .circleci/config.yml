@@ -14,7 +14,7 @@ commands:
     steps:
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react-dayo/package.json" }}-{{ checksum "example/package.json" }}
+            - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
       - when:
           condition: <<parameters.re-install>>
@@ -25,7 +25,7 @@ commands:
                   - example/node_modules
                   - packages/react-dayo/node_modules
                   - node_modules
-                key: v1-dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react-dayo/package.json" }}-{{ checksum "example/package.json" }}
+                key: v1-dependencies-{{ checksum "yarn.lock" }}
   yarn_test:
     steps:
       - run: yarn test

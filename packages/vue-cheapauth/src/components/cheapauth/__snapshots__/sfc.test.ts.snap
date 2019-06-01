@@ -2,8 +2,7 @@
 
 exports[`Cheapauth is input password is correct 1`] = `
 <div
-  class="sc-bdVaJa jwzWpU"
-  data-approval="false"
+  class="root"
   data-testid="cheapauth--root"
 >
   <div>
@@ -21,6 +20,7 @@ exports[`Cheapauth is input password is correct 1`] = `
           タイトル
         </h3>
       </header>
+       
       <div>
         <form
           class="form"
@@ -34,7 +34,10 @@ exports[`Cheapauth is input password is correct 1`] = `
               data-testid="cheapauth--input"
               type="password"
             />
+             
+            <!---->
           </div>
+           
           <div
             class="row"
           >
@@ -42,19 +45,21 @@ exports[`Cheapauth is input password is correct 1`] = `
               class="submit"
               data-testid="cheapauth--submit"
             >
-              ログイン
+              ログインする
             </button>
           </div>
         </form>
       </div>
     </section>
   </div>
+   
+  <!---->
 </div>
 `;
 
 exports[`Cheapauth is input password is correct 2`] = `
 <div
-  class="sc-bdVaJa jwzWpU"
+  class="root"
   data-approval="true"
   data-testid="cheapauth--root"
 >
@@ -73,6 +78,7 @@ exports[`Cheapauth is input password is correct 2`] = `
           タイトル
         </h3>
       </header>
+       
       <div>
         <form
           class="form"
@@ -86,7 +92,10 @@ exports[`Cheapauth is input password is correct 2`] = `
               data-testid="cheapauth--input"
               type="password"
             />
+             
+            <!---->
           </div>
+           
           <div
             class="row"
           >
@@ -94,20 +103,20 @@ exports[`Cheapauth is input password is correct 2`] = `
               class="submit"
               data-testid="cheapauth--submit"
             >
-              ログイン
+              ログインする
             </button>
           </div>
         </form>
       </div>
     </section>
   </div>
+   
 </div>
 `;
 
 exports[`Cheapauth is input password is incorrect 1`] = `
 <div
-  class="sc-bdVaJa jwzWpU"
-  data-approval="false"
+  class="root"
   data-testid="cheapauth--root"
 >
   <div>
@@ -125,6 +134,7 @@ exports[`Cheapauth is input password is incorrect 1`] = `
           タイトル
         </h3>
       </header>
+       
       <div>
         <form
           class="form"
@@ -138,7 +148,10 @@ exports[`Cheapauth is input password is incorrect 1`] = `
               data-testid="cheapauth--input"
               type="password"
             />
+             
+            <!---->
           </div>
+           
           <div
             class="row"
           >
@@ -146,20 +159,21 @@ exports[`Cheapauth is input password is incorrect 1`] = `
               class="submit"
               data-testid="cheapauth--submit"
             >
-              ログイン
+              ログインする
             </button>
           </div>
         </form>
       </div>
     </section>
   </div>
+   
+  <!---->
 </div>
 `;
 
 exports[`Cheapauth is input password is incorrect 2`] = `
 <div
-  class="sc-bdVaJa jwzWpU"
-  data-approval="false"
+  class="root"
   data-testid="cheapauth--root"
 >
   <div>
@@ -177,6 +191,7 @@ exports[`Cheapauth is input password is incorrect 2`] = `
           タイトル
         </h3>
       </header>
+       
       <div>
         <form
           class="form"
@@ -190,6 +205,7 @@ exports[`Cheapauth is input password is incorrect 2`] = `
               data-testid="cheapauth--input"
               type="password"
             />
+             
             <div
               aria-live="assertive"
               class="error-message"
@@ -200,6 +216,7 @@ exports[`Cheapauth is input password is incorrect 2`] = `
               </small>
             </div>
           </div>
+           
           <div
             class="row"
           >
@@ -207,12 +224,14 @@ exports[`Cheapauth is input password is incorrect 2`] = `
               class="submit"
               data-testid="cheapauth--submit"
             >
-              ログイン
+              ログインする
             </button>
           </div>
         </form>
       </div>
     </section>
   </div>
+   
+  <!---->
 </div>
 `;

@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "cheapauth-jest",
+  "version": "0.0.0",
+  "dependencies": {
+    "@testing-library/react": "^8.0.1",
+    "@types/jest": "^24.0.13",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "jest": "^24.8.0",
+    "react-testing-library": "^8.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.1",
+    "vue": "^2.6.10"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0"
+  }
+}
