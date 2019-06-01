@@ -14,10 +14,8 @@
   ],
   "keywords": [
     "react-component",
-    "notification",
-    "alert",
-    "confirm",
-    "dialog"
+    "authentication",
+    "form"
   ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",

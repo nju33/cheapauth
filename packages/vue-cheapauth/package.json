@@ -16,11 +16,9 @@
     "dist"
   ],
   "keywords": [
-    "react-component",
-    "notification",
-    "alert",
-    "confirm",
-    "dialog"
+    "vue-component",
+    "authentication",
+    "form"
   ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",

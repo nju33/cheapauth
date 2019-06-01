@@ -1,6 +1,6 @@
 {
   "private": true,
-  "description": "A Cheap authentication",
+  "description": "A UI component of cheap authentication screen",
   "repository": "nju33/cheapauth",
   "author": "nju33 <nju33.ki@gmail.com>",
   "license": "MIT",
@@ -14,9 +14,10 @@
     "dev": "lerna run dev --stream --scope @react-dayo/example",
     "build": "lerna run build --stream --no-private",
     "publish": "lerna publish",
-    "postpublish": "run-s push:*",
-    "push:example": "gh-pages --dist example --src '{pages/**,*}' --branch example --dotfiles",
-    "push:docs": "gh-pages --dist packages/react-dayo --src '{src/**,*}' --branch docs --dotfiles"
+    "postpublish": "run-p example.push",
+    "example.push:react": "gh-pages --dist examples/react-cheapauth --src '{pages/**,*}' --branch @example/react-cheapauth --dotfiles",
+    "example.push:vue": "gh-pages --dist examples/vue-cheapauth --src '{pages/**,*}' --branch @example/vue-cheapauth --dotfiles",
+    "example.push": "run-s example.push:*"
   },
   "devDependencies": {
     "@nju33/eslint-config": "/Users/nju33/github/nju33/config/packages/eslint",
@@ -29,5 +30,9 @@
     "renovate-config-nju33": "0.0.1",
     "typescript": "3.4.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "authentication",
+    "form"
+  ]
 }
