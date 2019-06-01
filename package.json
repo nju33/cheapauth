@@ -17,6 +17,7 @@
     "postpublish": "run-p example.push",
     "example.push:react": "gh-pages --dist examples/react-cheapauth --src '{pages/**,*}' --branch @example/react-cheapauth --dotfiles",
     "example.push:vue": "gh-pages --dist examples/vue-cheapauth --src '{pages/**,*}' --branch @example/vue-cheapauth --dotfiles",
+    "preexample.push": "rm -rf node_modules/gh-pages/.cache && git push origin :@example/react-cheapauth; git push origin :@example/vue-cheapauth; :",
     "example.push": "run-s example.push:*"
   },
   "devDependencies": {
