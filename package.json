@@ -20,7 +20,7 @@
     "example.push": "run-s example.push:*"
   },
   "devDependencies": {
-    "@nju33/eslint-config": "/Users/nju33/github/nju33/config/packages/eslint",
+    "@nju33/eslint-config": "^0.0.26",
     "@nju33/prettier": "0.0.25",
     "eslint": "5.16.0",
     "gh-pages": "2.0.1",
