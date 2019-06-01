@@ -1,6 +1,6 @@
 # vue-cheapauth
 
-[![vue-cheapauth](https://badgen.net/badge//nju33,react-dayo/000?icon=github&list=1)](https://github.com/nju33/cheapauth)
+[![vue-cheapauth](https://badgen.net/badge//nju33,cheapauth/000?icon=github&list=1)](https://github.com/nju33/cheapauth)
 
 ## Prepare
 
