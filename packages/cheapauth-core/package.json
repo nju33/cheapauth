@@ -1,6 +1,6 @@
 {
-  "name": "react-cheapauth",
-  "description": "A UI component of cheap authentication screen",
+  "private": true,
+  "name": "cheapauth-core",
   "version": "0.0.7-alpha.0",
   "main": "dist/main/index.js",
   "types": "dist/types/index.d.ts",
@@ -12,14 +12,8 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "react-component",
-    "authentication",
-    "form"
-  ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",
-    "dev": "tsc -P tsconfig.module.json -w",
     "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | ../../node_modules/.bin/coveralls; fi",
     "test:watch": "jest --watch",
     "build:main": "tsc -P tsconfig.main.json",
@@ -29,27 +23,9 @@
     "build": "run-p build:*",
     "docs": "typedoc --theme minimal --out docs src/index.ts --ignoreCompilerErrors"
   },
-  "peerDependencies": {
-    "@types/react": "^16.8.0",
-    "react": "^16.8.0"
-  },
+  "peerDependencies": {},
   "devDependencies": {
-    "@testing-library/react": "^8.0.1",
-    "@types/jest": "24.0.14",
-    "@types/react": "16.8.20",
-    "@types/react-dom": "16.8.4",
-    "@types/styled-components": "4.1.15",
-    "coveralls": "3.0.3",
-    "jest": "24.8.0",
-    "jest-dom": "^3.4.0",
-    "npm-run-all": "4.1.5",
-    "react": "16.8.6",
-    "styled-components": "4.2.0",
-    "ts-jest": "24.0.2",
     "typescript": "3.4.5"
   },
-  "gitHead": "9773e475f699aba13005bb60467946920e22d77d",
-  "dependencies": {
-    "cheapauth-core": "^0.0.7-alpha.0"
-  }
+  "gitHead": "9773e475f699aba13005bb60467946920e22d77d"
 }

@@ -4,17 +4,22 @@
     "module": "esnext",
     "lib": ["es2015", "es2016", "es2017", "dom"],
     "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
-    "jsx": "preserve",
+    "jsx": "react",
     "sourceMap": true,
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
     "baseUrl": "..",
     "paths": {
-      "cheapauth-core": ["cheapauth-core/src/index.ts"],
-      "cheapauth-jest/extend-expect": ["cheapauth-jest/src"]
+      "react-cheapauth": [
+        "react-cheapauth",
+        "react-cheapauth/src/index.ts"
+      ],
+      "vue-cheapauth": [
+        "vue-cheapauth",
+        "vue-cheapauth/src/components/cheapauth/sfc/index.vue"
+      ]
     }
   },
   "include": ["src"],

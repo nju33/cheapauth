@@ -1,6 +1,14 @@
 {
 	"folders": [
 		{
+			"name": "cheapauth-core",
+			"path": "./packages/cheapauth-core"
+		},
+		{
+			"name": "cheapauth-storybook",
+			"path": "./packages/cheapauth-storybook"
+		},
+		{
 			"name": "react-cheapauth",
 			"path": "./packages/react-cheapauth"
 		},

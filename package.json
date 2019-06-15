@@ -11,7 +11,7 @@
   "scripts": {
     "prepare": "lerna bootstrap",
     "test": "lerna run test --stream --no-private",
-    "dev": "lerna run dev --stream --scope @react-dayo/example",
+    "dev": "lerna run dev --stream --scope '{cheapauth-storybook,react-cheapauth,vue-cheapauth}'",
     "build": "lerna run build --stream --no-private",
     "publish": "lerna publish",
     "postpublish": "run-p example.push",

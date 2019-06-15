@@ -29,7 +29,7 @@ import vue from 'rollup-plugin-vue';
 //   ],
 // };
 
-export default {
+const common = {
   input: 'src/components/cheapauth/sfc/index.vue',
   external: ['vue'],
   plugins: [
@@ -45,3 +45,22 @@ export default {
     vue({css: false}),
   ],
 };
+
+export default [
+  {
+    ...common,
+    output: {
+      format: 'esm',
+      file: 'dist/module/index.js',
+      sourcemap: true,
+    },
+  },
+  {
+    ...common,
+    output: {
+      format: 'cjs',
+      file: 'dist/main/index.js',
+      sourcemap: true,
+    },
+  },
+];

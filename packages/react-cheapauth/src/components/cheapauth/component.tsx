@@ -22,6 +22,7 @@ export class Cheapauth extends React.PureComponent<
   public state: CheapauthComponentState = {
     password: undefined,
     approval: false,
+    showForm: false,
     error: false,
   };
 
@@ -30,9 +31,12 @@ export class Cheapauth extends React.PureComponent<
   public componentDidMount() {
     const answer = new Password(this.props.password);
 
+    const approved = init(answer);
+
     this.setState({
       password: answer,
-      approval: init(answer),
+      approval: approved,
+      showForm: !approved,
     });
 
     if (this.inputRef.current !== null) {
@@ -56,9 +60,9 @@ export class Cheapauth extends React.PureComponent<
 
     if (!approval) {
       this.setState({
+        ...this.state,
         error: true,
         errorMessage: 'パスワードが違います',
-        approval: false,
       });
       return;
     }

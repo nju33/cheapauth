@@ -1,4 +1,4 @@
-import {PasswordImpl} from '../../entities/password';
+import {PasswordImpl} from './entities/password';
 
 export interface CheapauthThemeStruct {
   accentColor?: string;

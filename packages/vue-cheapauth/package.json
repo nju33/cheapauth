@@ -3,7 +3,7 @@
   "description": "A UI component of cheap authentication screen",
   "version": "0.0.9-alpha.0",
   "main": "dist/main/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "vue-cheapauth.d.ts",
   "module": "dist/module/index.js",
   "source": "src/index.ts",
   "browser": {
@@ -24,11 +24,11 @@
   ],
   "scripts": {
     "prepare": "if [ -z \"$CIRCLECI\" ]; then yarn build; fi",
+    "dev": "rollup -c rollup.config.js -w",
     "test": "if [ -z \"$CIRCLECI\" ]; then jest; else jest --coverage --coverageReporters=text-lcov | ../../node_modules/.bin/coveralls; fi",
     "test:watch": "jest --watch",
-    "build:main": "rollup -c rollup.config.js --sourcemap --format cjs --file dist/main/index.js",
     "postbuild:main": "cp dist/main/index.css cheapauth.css",
-    "build:module": "rollup -c rollup.config.js --sourcemap --format esm --file dist/module/index.js",
+    "build:moduleAndMain": "rollup -c rollup.config.js",
     "build:types": "mkdir -p dist/{main,module,types} && yarn cp-dts-into-dist-module && cp src/cheapauth.d.ts dist/types/index.d.ts",
     "cp-dts-into-dist-module": "cp src/cheapauth.d.ts dist/main/index.d.ts && cp src/cheapauth.d.ts dist/module/index.d.ts",
     "prebuild": "rm -rf dist .rpt2_cache",
@@ -59,5 +59,8 @@
     "vue-jest": "^3.0.4",
     "vue-property-decorator": "^8.1.1"
   },
-  "gitHead": "9773e475f699aba13005bb60467946920e22d77d"
+  "gitHead": "9773e475f699aba13005bb60467946920e22d77d",
+  "dependencies": {
+    "cheapauth-core": "^0.0.7-alpha.0"
+  }
 }

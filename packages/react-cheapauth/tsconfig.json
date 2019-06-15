@@ -12,6 +12,7 @@
     "esModuleInterop": true,
     "baseUrl": "..",
     "paths": {
+      "cheapauth-core": ["cheapauth-core/src/index.ts"],
       "cheapauth-jest/extend-expect": ["cheapauth-jest/src/index.ts"]
     }
   },

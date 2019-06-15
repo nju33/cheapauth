@@ -1,4 +1,5 @@
 @types/react-native
+cheapauth-core
 react-cheapauth
 vue-cheapauth
 cheapable-jest
