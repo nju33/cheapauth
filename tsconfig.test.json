@@ -10,18 +10,17 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "..",
+    "baseUrl": "src",
     "paths": {
-      "react-cheapauth": [
-        "react-cheapauth",
-        "react-cheapauth/src/index.ts"
-      ],
-      "vue-cheapauth": [
-        "vue-cheapauth",
-        "vue-cheapauth/src/components/cheapauth/sfc/index.vue"
-      ]
+      "cheapauth-core": ["cheapauth-core/src/index.ts"],
+      "cheapauth-jest/extend-expect": ["cheapauth-jest/src/index.ts"]
     }
   },
-  "include": ["src"],
+  "include": [
+    "src/cheapauth-core/src",
+    "src/react-cheapauth/src",
+    "src/vue-cheapauth/src",
+    "src/cheapauth-jes/src"
+  ],
   "exclude": []
 }

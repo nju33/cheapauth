@@ -10,8 +10,10 @@
   ],
   "scripts": {
     "prepare": "lerna bootstrap",
-    "test": "lerna run test --stream --no-private",
-    "dev": "lerna run dev --stream --scope '{cheapauth-storybook,react-cheapauth,vue-cheapauth}'",
+    "_test": "lerna run test --stream --no-private",
+    "test": "jest",
+    "react.dev": "lerna run dev --stream --scope 'react-cheapauth'",
+    "vue.dev": "lerna run dev --stream --scope 'vue-cheapauth'",
     "build": "lerna run build --stream --no-private",
     "publish": "lerna publish",
     "postpublish": "run-p example.push",

@@ -1,4 +1,0 @@
-{
-  "root": true,
-  "extends": "@nju33/eslint-config/react/ts"
-}

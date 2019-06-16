@@ -3,13 +3,15 @@ import originalStyled, {
   StyledComponentBase,
   ThemedBaseStyledInterface,
 } from 'styled-components';
+import {CheapauthThemeStruct} from './interfaces';
 import {
-  CheapauthThemeStruct,
+  IInit,
+  Init,
+  ILogin,
+  Login,
   CheapauthComponentProps,
   CheapauthComponentState,
-} from './interfaces';
-import Password from '../../entities/password';
-import {init, handleAuthentication} from './use-cases';
+} from 'cheapauth-core';
 
 const component = ({} as unknown) as {
   root: StyledComponentBase<'div', {}>;
@@ -20,50 +22,58 @@ export class Cheapauth extends React.PureComponent<
   CheapauthComponentState
 > {
   public state: CheapauthComponentState = {
-    password: undefined,
     approval: false,
     showForm: false,
     error: false,
   };
 
+  public init: IInit = new Init(this.props.password);
+
+  public login: ILogin = new Login(this.props.password);
+
   public inputRef = React.createRef<HTMLInputElement>();
 
-  public componentDidMount() {
-    const answer = new Password(this.props.password);
+  public get inputValue() {
+    const inputElement = this.inputRef.current;
+    if (inputElement === null) {
+      return '';
+    }
 
-    const approved = init(answer);
+    return inputElement.value;
+  }
+
+  public componentDidMount() {
+    const result = this.init.invoke();
 
     this.setState({
-      password: answer,
-      approval: approved,
-      showForm: !approved,
+      approval: result.approval,
+      showForm: !result.approval,
     });
 
-    if (this.inputRef.current !== null) {
-      this.inputRef.current.focus();
+    setTimeout(() => {
+      if (this.inputRef.current !== null) {
+        this.inputRef.current.focus();
+      }
+    }, 50);
+  }
+
+  public componentDidUpdate(prevProps: CheapauthComponentProps) {
+    if (prevProps.password !== this.props.password) {
+      this.init = new Init(this.props.password);
+      this.login = new Login(this.props.password);
     }
   }
 
   public onSubmit = (ev: React.FormEvent): void => {
     ev.preventDefault();
 
-    const input = this.inputRef.current;
-    if (input === null) {
-      return;
-    }
-
-    if (this.state.password === undefined) {
-      return;
-    }
-
-    const approval = handleAuthentication(this.state.password, input.value);
+    const approval = this.login.invoke(this.inputValue);
 
     if (!approval) {
-      this.setState({
-        ...this.state,
+      this.setState(({
         error: true,
-        errorMessage: 'パスワードが違います',
-      });
+        errorMessage: this.props.errorMessage || 'The password is incorrect',
+      } as unknown) as CheapauthComponentState);
       return;
     }
 
@@ -79,46 +89,58 @@ export class Cheapauth extends React.PureComponent<
           data-testid="cheapauth--root"
         >
           <div className="cheapauth--document">
-            <section className="cheapauth--section" aria-labelledby="cheapauth">
-              <header className="cheapauth--header">
-                <h3 className="cheapauth--title" data-testid="cheapauth--title">
-                  {this.props.title}
-                </h3>
-              </header>
-              <div>
-                <form
-                  className="cheapauth--form"
-                  data-testid="cheapauth--form"
-                  onSubmit={this.onSubmit}
-                >
-                  <div className="cheapauth--row">
-                    <input
-                      ref={this.inputRef}
-                      type="password"
-                      className="cheapauth--input"
-                      data-testid="cheapauth--input"
-                    />
-                    {this.state.error && (
-                      <div
-                        className="cheapauth--error-message"
-                        data-testid="cheapauth--error-message"
-                        aria-live="assertive"
+            {this.state.showForm && (
+              <section
+                className="cheapauth--section"
+                aria-labelledby="cheapauth"
+              >
+                {this.props.icon && (
+                  <header className="cheapauth--header">
+                    <img src={this.props.icon} className="cheapauth--icon" />
+                  </header>
+                )}
+                <div>
+                  <form
+                    className="cheapauth--form"
+                    data-testid="cheapauth--form"
+                    onSubmit={this.onSubmit}
+                  >
+                    <div className="cheapauth--row">
+                      <label
+                        className="cheapauth--label"
+                        data-testid="cheapauth--label"
                       >
-                        <small>{this.state.errorMessage}</small>
-                      </div>
-                    )}
-                  </div>
-                  <div className="cheapauth--row">
-                    <button
-                      className="cheapauth--submit"
-                      data-testid="cheapauth--submit"
-                    >
-                      {this.props.submitLabel}
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </section>
+                        {this.props.label}
+                      </label>
+                      <input
+                        ref={this.inputRef}
+                        type="password"
+                        className="cheapauth--input"
+                        data-testid="cheapauth--input"
+                      />
+                      {this.state.error && (
+                        <div
+                          className="cheapauth--error-message"
+                          data-testid="cheapauth--error-message"
+                          aria-live="assertive"
+                        >
+                          <small>{this.state.errorMessage}</small>
+                        </div>
+                      )}
+                    </div>
+                    <div className="cheapauth--row">
+                      <div></div>
+                      <button
+                        className="cheapauth--submit"
+                        data-testid="cheapauth--submit"
+                      >
+                        {this.props.submitLabel}
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+            )}
           </div>
         </component.root>
         {this.props.children}
@@ -147,7 +169,7 @@ component.root = styled.div`
     right: 50%;
     bottom: 50%;
     transform: translate(50%, 50%);
-    background: ${props => props.theme.backgroundColor || '#f8f8f8'};
+    background: ${props => props.theme.backgroundColor || '#e3e3e3'};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,17 +177,17 @@ component.root = styled.div`
   }
 
   .cheapauth--header {
-    margin-left: 0.5em;
+    text-align: center;
+    margin-top: -5em;
+    margin-bottom: 2em;
+  }
+
+  .cheapauth--icon {
+    width: 5em;
   }
 
   .cheapauth--section {
     width: 90vw;
-  }
-
-  .cheapauth--title {
-    text-align: center;
-    margin-bottom: 1.5em;
-    font-size: 2em;
   }
 
   .cheapauth--form {
@@ -181,14 +203,29 @@ component.root = styled.div`
     position: relative;
   }
 
+  .cheapauth--row:nth-of-type(1) {
+    align-items: flex-start;
+  }
+
+  .cheapauth--label {
+    text-align: center;
+    margin: 0.2em;
+    text-align: left;
+    font-size: 1em;
+    color: #444;
+  }
+
   .cheapauth--input {
     font-size: 1em;
-    height: 2.5em;
+    height: 2em;
     width: 100%;
     padding: 0.5em 1em;
     box-sizing: border-box;
     border: none;
-    box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.5);
+    &:focus {
+      outline-width: 1px;
+      outline-offset: -3px;
+    }
   }
 
   .cheapauth--error-message {
@@ -203,13 +240,18 @@ component.root = styled.div`
     font-size: 1em;
     max-width: 55vw;
     width: 100%;
-    height: 2.5em;
-    padding: 0.5em 1em;
+    height: 2em;
+    padding: 0.3em 0.7em;
     box-sizing: border-box;
     cursor: pointer;
     border: none;
-    background: ${props => props.theme.accentColor || '#2ea9df'};
+    background: ${props => props.theme.accentColor || '#fff'};
     margin-top: 2em;
+
+    &:focus {
+      outline-width: 1px;
+      outline-offset: -3px;
+    }
   }
 
   @media screen and (min-width: 758px) {
@@ -217,15 +259,20 @@ component.root = styled.div`
       width: auto;
     }
 
-    .cheapauth--title {
-      text-align: left;
-      margin-bottom: 0.5em;
-      font-size: 1.2em;
+    .cheapauth--row + .cheapauth--row {
+      margin-top: 0.5em;
     }
 
-    .cheapauth--form {
+    .cheapauth--row:nth-of-type(2) {
       flex-direction: row;
-      align-items: flex-start;
+      text-align: right;
+      justify-content: space-between;
+    }
+
+    .cheapauth--label {
+      text-align: left;
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
     }
 
     .cheapauth--input {

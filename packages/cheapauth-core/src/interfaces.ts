@@ -1,5 +1,3 @@
-import {PasswordImpl} from './entities/password';
-
 export interface CheapauthThemeStruct {
   accentColor?: string;
   backgroundColor?: string;
@@ -7,7 +5,9 @@ export interface CheapauthThemeStruct {
 
 export interface CheapauthComponentProps {
   theme?: CheapauthThemeStruct;
-  title: string;
+  errorMessage?: string;
+  icon?: string;
+  label: string;
   submitLabel: string;
   password: string;
 }
@@ -26,7 +26,6 @@ export interface CheapauthComponentFalsyFormState {
 }
 
 export interface CheapauthComponentAuthorizationState {
-  password?: PasswordImpl;
   approval: boolean;
 }
 

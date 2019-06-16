@@ -16,6 +16,6 @@
       "cheapauth-jest/extend-expect": ["cheapauth-jest/src/index.ts"]
     }
   },
-  "include": ["src"],
+  "include": ["sandbox", "src"],
   "exclude": []
 }
