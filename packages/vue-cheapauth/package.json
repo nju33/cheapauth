@@ -52,7 +52,7 @@
     "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-typescript2": "^0.21.1",
     "rollup-plugin-vue": "^5.0.0",
-    "ts-jest": "24.3.0",
+    "ts-jest": "25.5.1",
     "typedoc": "0.17.3",
     "typescript": "3.4.5",
     "vue": "^2.6.10",
