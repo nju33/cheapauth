@@ -54,7 +54,7 @@
     "rollup-plugin-vue": "^5.0.0",
     "ts-jest": "24.3.0",
     "typedoc": "0.17.8",
-    "typescript": "3.4.5",
+    "typescript": "3.9.7",
     "vue": "^2.6.10",
     "vue-jest": "^3.0.4",
     "vue-property-decorator": "^8.1.1"

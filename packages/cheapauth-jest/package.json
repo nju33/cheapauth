@@ -10,7 +10,7 @@
     "react-testing-library": "^8.0.1"
   },
   "devDependencies": {
-    "typescript": "^3.5.1",
+    "typescript": "3.9.7",
     "vue": "^2.6.10"
   },
   "peerDependencies": {
