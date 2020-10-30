@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@nju33/eslint-config": "^0.0.26",
-    "@nju33/prettier": "0.0.25",
+    "@nju33/prettier": "0.0.26",
     "eslint": "5.16.0",
     "gh-pages": "2.2.0",
     "lerna": "3.22.1",
