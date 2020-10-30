@@ -45,7 +45,7 @@
     "react": "16.14.0",
     "styled-components": "4.4.1",
     "ts-jest": "24.3.0",
-    "typescript": "3.9.7"
+    "typescript": "4.0.5"
   },
   "gitHead": "9773e475f699aba13005bb60467946920e22d77d"
 }
